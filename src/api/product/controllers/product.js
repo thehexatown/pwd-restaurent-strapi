@@ -24,6 +24,7 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
   },
   search: async (ctx, next) => {
     const { title } = ctx.request.params;
+    console.log(title);
 
     const products = await strapi.db.query("api::product.product").findMany({
       where: {
