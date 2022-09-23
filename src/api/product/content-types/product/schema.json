@@ -59,6 +59,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::categoty.categoty"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }

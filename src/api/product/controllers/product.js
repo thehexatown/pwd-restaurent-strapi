@@ -7,7 +7,7 @@
 const { createCoreController } = require("@strapi/strapi").factories;
 
 module.exports = createCoreController("api::product.product", ({ strapi }) => ({
-  confirmOrder: async (ctx, next) => {
+  productsByCategory: async (ctx, next) => {
     const { id } = ctx.request.params;
 
     const products = await strapi.db.query("api::product.product").findMany({
@@ -23,7 +23,7 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
     return { products };
   },
   search: async (ctx, next) => {
-    const { title } = ctx.request.params;
+    const { title, id } = ctx.request.params;
     console.log(title);
 
     const products = await strapi.db.query("api::product.product").findMany({
@@ -31,9 +31,20 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
         title: {
           $contains: title,
         },
+        users_permissions_user: id,
       },
     });
 
     return { products };
+  },
+  organizationProducts: async (ctx, next) => {
+    const { id } = ctx.request.params;
+    const products = await strapi.db.query("api::product.product").findMany({
+      populate: { extras: true },
+      where: {
+        users_permissions_user: id,
+      },
+    });
+    return products;
   },
 }));

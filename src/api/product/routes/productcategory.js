@@ -3,12 +3,17 @@ module.exports = {
     {
       method: "GET",
       path: "/products/category/:id",
-      handler: "product.confirmOrder",
+      handler: "product.productsByCategory",
     },
     {
       method: "GET",
-      path: "/products/search/:title",
+      path: "/products/search/:id/:title",
       handler: "product.search",
+    },
+    {
+      method: "GET",
+      path: "/products/organization/:id",
+      handler: "product.organizationProducts",
     },
   ],
 };
