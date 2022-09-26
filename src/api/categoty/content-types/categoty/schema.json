@@ -15,10 +15,10 @@
     "name": {
       "type": "string"
     },
-    "users_permissions_user": {
+    "organization": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "target": "api::organization.organization"
     }
   }
 }

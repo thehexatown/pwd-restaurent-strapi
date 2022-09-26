@@ -60,10 +60,10 @@
       "relation": "oneToOne",
       "target": "api::categoty.categoty"
     },
-    "users_permissions_user": {
+    "organization": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "target": "api::organization.organization"
     }
   }
 }

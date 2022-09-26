@@ -31,7 +31,7 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
         title: {
           $contains: title,
         },
-        users_permissions_user: id,
+        organization: id,
       },
     });
 
@@ -42,7 +42,7 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
     const products = await strapi.db.query("api::product.product").findMany({
       populate: { extras: true },
       where: {
-        users_permissions_user: id,
+        organization: id,
       },
     });
     return products;

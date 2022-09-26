@@ -15,7 +15,7 @@ module.exports = createCoreController(
         .query("api::categoty.categoty")
         .findMany({
           where: {
-            users_permissions_user: id,
+            organization: id,
           },
         });
       return categories;
