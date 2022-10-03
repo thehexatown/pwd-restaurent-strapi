@@ -26,19 +26,8 @@
     "description": {
       "type": "text",
       "required": true,
-      "maxLength": 100,
+      "maxLength": 62,
       "minLength": 15
-    },
-    "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
     },
     "smallPrice": {
       "type": "decimal",
@@ -49,21 +38,6 @@
       "type": "decimal",
       "required": true,
       "default": 0
-    },
-    "extras": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::extra.extra"
-    },
-    "category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::categoty.categoty"
-    },
-    "organization": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::organization.organization"
     }
   }
 }

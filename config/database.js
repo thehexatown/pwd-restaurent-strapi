@@ -1,3 +1,20 @@
+// module.exports = ({ env }) => ({
+//   connection: {
+//     client: "mysql",
+//     connection: {
+//       host: env("DATABASE_HOST", "192.254.225.207"),
+//       port: env.int("DATABASE_PORT", 3306),
+//       database: env("DATABASE_NAME", "royaltea_thehexatown_pwd_restaurant"),
+//       user: env("DATABASE_USERNAME", "royaltea_tht_dev"),
+//       password: env("DATABASE_PASSWORD", "8zyzw+UQKjCm"),
+//       ssl: {
+//         rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false),
+//       },
+//     },
+//     debug: false,
+//   },
+// });
+
 module.exports = ({ env }) => ({
   connection: {
     client: "mysql",

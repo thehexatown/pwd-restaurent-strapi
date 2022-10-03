@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "cartItems": {
-      "type": "json"
-    },
     "Total": {
       "type": "decimal"
     },
